@@ -13,15 +13,13 @@
 // limitations under the License.
 
 import React, {useContext} from 'react';
-import {GreetContext,Greet2Context} from './A';
+import {GreetContext} from './A';
 
 export default function C() {
     const useCon = useContext(GreetContext);
-    const useCon2 = useContext(Greet2Context);
-    console.log(useCon+" "+useCon2);
     return (
         <div>
-            <h1>{useCon} {useCon2}</h1>
+            <h1>{useCon.greet} {useCon.greet2}</h1>
         </div>
     )
 }

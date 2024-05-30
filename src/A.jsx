@@ -16,21 +16,18 @@ import React, {createContext} from 'react';
 import B from './B'
 
 const GreetContext = createContext();
-const Greet2Context = createContext();
 export default function A () {
     const greet = 'hello';
     const greet2 = 'hello2';
     return (
-        <GreetContext.Provider value = {greet}>
-        <Greet2Context.Provider value = {greet2}>
+        <GreetContext.Provider value = {{greet,greet2}}>
         <div>
             <B/>
         </div>
-        </Greet2Context.Provider>
         </GreetContext.Provider>
     )
 
 }
 
-export {GreetContext,Greet2Context};
+export {GreetContext};
 
